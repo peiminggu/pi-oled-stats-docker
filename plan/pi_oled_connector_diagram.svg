@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Raspberry Pi 5 to SSD1306 OLED I2C wiring diagram</title>
+  <desc id="desc">Connect OLED VCC to Raspberry Pi physical pin 1, GND to pin 6, SDA to pin 3, and SCL to pin 5.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f7f9fb; }
+      .panel { fill: #ffffff; stroke: #243447; stroke-width: 3; }
+      .pi-board { fill: #287a4b; stroke: #145331; stroke-width: 4; }
+      .oled-board { fill: #1d3557; stroke: #0d1b2a; stroke-width: 4; }
+      .oled-screen { fill: #05070a; stroke: #5bc0eb; stroke-width: 3; }
+      .pin { fill: #d9a441; stroke: #5e4317; stroke-width: 2; }
+      .pin-hot { fill: #ffcf5a; stroke: #6d4c00; stroke-width: 3; }
+      .label { fill: #17212b; font-family: Arial, Helvetica, sans-serif; font-size: 24px; font-weight: 700; }
+      .small { fill: #17212b; font-family: Arial, Helvetica, sans-serif; font-size: 18px; }
+      .tiny { fill: #17212b; font-family: Arial, Helvetica, sans-serif; font-size: 15px; }
+      .white { fill: #ffffff; }
+      .wire-red { fill: none; stroke: #d62828; stroke-width: 8; stroke-linecap: round; stroke-linejoin: round; }
+      .wire-black { fill: none; stroke: #1d1d1d; stroke-width: 8; stroke-linecap: round; stroke-linejoin: round; }
+      .wire-blue { fill: none; stroke: #277da1; stroke-width: 8; stroke-linecap: round; stroke-linejoin: round; }
+      .wire-yellow { fill: none; stroke: #f9c74f; stroke-width: 8; stroke-linecap: round; stroke-linejoin: round; }
+      .legend-line { stroke-width: 8; stroke-linecap: round; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1200" height="760"/>
+  <text x="60" y="62" class="label">Raspberry Pi 5 to SSD1306 OLED wiring</text>
+  <text x="60" y="96" class="small">Use the Pi 3.3V I2C pins: VCC to pin 1, SDA to pin 3, SCL to pin 5, GND to pin 6.</text>
+
+  <rect x="62" y="135" width="510" height="540" rx="18" class="pi-board"/>
+  <text x="95" y="180" class="label white">Raspberry Pi 40-pin header</text>
+  <text x="95" y="210" class="small white">Top view, physical pin numbers</text>
+
+  <g id="pi-pins">
+    <rect x="392" y="238" width="118" height="382" rx="8" fill="#173322" stroke="#0f2016" stroke-width="3"/>
+    <g class="tiny">
+      <text x="333" y="264">1  3V3</text>
+      <text x="524" y="264">2  5V</text>
+      <text x="310" y="300">3  SDA / GPIO2</text>
+      <text x="524" y="300">4  5V</text>
+      <text x="310" y="336">5  SCL / GPIO3</text>
+      <text x="524" y="336">6  GND</text>
+      <text x="333" y="372">7</text>
+      <text x="524" y="372">8</text>
+      <text x="333" y="408">9</text>
+      <text x="524" y="408">10</text>
+      <text x="326" y="444">11</text>
+      <text x="524" y="444">12</text>
+      <text x="326" y="480">13</text>
+      <text x="524" y="480">14</text>
+      <text x="326" y="516">15</text>
+      <text x="524" y="516">16</text>
+      <text x="326" y="552">17</text>
+      <text x="524" y="552">18</text>
+      <text x="326" y="588">19</text>
+      <text x="524" y="588">20</text>
+    </g>
+
+    <g>
+      <circle id="pin1" cx="420" cy="256" r="11" class="pin-hot"/>
+      <circle id="pin2" cx="482" cy="256" r="11" class="pin"/>
+      <circle id="pin3" cx="420" cy="292" r="11" class="pin-hot"/>
+      <circle id="pin4" cx="482" cy="292" r="11" class="pin"/>
+      <circle id="pin5" cx="420" cy="328" r="11" class="pin-hot"/>
+      <circle id="pin6" cx="482" cy="328" r="11" class="pin-hot"/>
+      <circle cx="420" cy="364" r="11" class="pin"/>
+      <circle cx="482" cy="364" r="11" class="pin"/>
+      <circle cx="420" cy="400" r="11" class="pin"/>
+      <circle cx="482" cy="400" r="11" class="pin"/>
+      <circle cx="420" cy="436" r="11" class="pin"/>
+      <circle cx="482" cy="436" r="11" class="pin"/>
+      <circle cx="420" cy="472" r="11" class="pin"/>
+      <circle cx="482" cy="472" r="11" class="pin"/>
+      <circle cx="420" cy="508" r="11" class="pin"/>
+      <circle cx="482" cy="508" r="11" class="pin"/>
+      <circle cx="420" cy="544" r="11" class="pin"/>
+      <circle cx="482" cy="544" r="11" class="pin"/>
+      <circle cx="420" cy="580" r="11" class="pin"/>
+      <circle cx="482" cy="580" r="11" class="pin"/>
+    </g>
+  </g>
+
+  <rect x="735" y="185" width="360" height="300" rx="18" class="oled-board"/>
+  <text x="775" y="230" class="label white">SSD1306 OLED</text>
+  <rect x="780" y="258" width="270" height="122" rx="8" class="oled-screen"/>
+  <text x="830" y="327" fill="#5bc0eb" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">128x32 / 128x64</text>
+
+  <g id="oled-pins">
+    <circle id="oled-vcc" cx="780" cy="432" r="12" class="pin-hot"/>
+    <text x="803" y="438" class="small white">VCC</text>
+    <circle id="oled-gnd" cx="865" cy="432" r="12" class="pin-hot"/>
+    <text x="888" y="438" class="small white">GND</text>
+    <circle id="oled-scl" cx="950" cy="432" r="12" class="pin-hot"/>
+    <text x="973" y="438" class="small white">SCL</text>
+    <circle id="oled-sda" cx="1035" cy="432" r="12" class="pin-hot"/>
+    <text x="1058" y="438" class="small white">SDA</text>
+  </g>
+
+  <path class="wire-red" d="M780 432 C650 410 560 260 420 256"/>
+  <path class="wire-black" d="M865 432 C710 500 620 360 482 328"/>
+  <path class="wire-yellow" d="M950 432 C700 390 575 350 420 328"/>
+  <path class="wire-blue" d="M1035 432 C740 320 590 300 420 292"/>
+
+  <rect x="62" y="692" width="1072" height="44" rx="8" fill="#ffffff" stroke="#c9d4df"/>
+  <line x1="92" y1="714" x2="142" y2="714" class="legend-line" stroke="#d62828"/>
+  <text x="154" y="720" class="tiny">VCC to pin 1 / 3V3</text>
+  <line x1="330" y1="714" x2="380" y2="714" class="legend-line" stroke="#1d1d1d"/>
+  <text x="392" y="720" class="tiny">GND to pin 6</text>
+  <line x1="535" y1="714" x2="585" y2="714" class="legend-line" stroke="#277da1"/>
+  <text x="597" y="720" class="tiny">SDA to pin 3 / GPIO2</text>
+  <line x1="790" y1="714" x2="840" y2="714" class="legend-line" stroke="#f9c74f"/>
+  <text x="852" y="720" class="tiny">SCL to pin 5 / GPIO3</text>
+</svg>
