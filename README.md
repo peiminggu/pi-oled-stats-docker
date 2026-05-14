@@ -41,6 +41,39 @@ i2cdetect -y 1
 
 Most SSD1306 modules appear at `0x3C`. Some appear at `0x3D`.
 
+## Find the I2C Address
+
+After I2C is enabled and the OLED is wired, scan bus `1`:
+
+```sh
+i2cdetect -y 1
+```
+
+Look for a detected value in the grid, such as `3c` or `3d`:
+
+```text
+     0 1 2 3 4 5 6 7 8 9 a b c d e f
+30: -- -- -- -- -- -- -- -- -- -- -- -- 3c -- -- --
+```
+
+If the scan shows `3c`, use:
+
+```yaml
+I2C_ADDRESS: "0x3C"
+```
+
+If it shows `3d`, use:
+
+```yaml
+I2C_ADDRESS: "0x3D"
+```
+
+If the scan does not show either address, confirm the OLED wiring, confirm I2C is enabled, and check that `/dev/i2c-1` exists:
+
+```sh
+ls /dev/i2c-*
+```
+
 ## Configure the Display
 
 Edit `docker-compose.yml` if needed:
