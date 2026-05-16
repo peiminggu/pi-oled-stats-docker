@@ -128,7 +128,7 @@ docker compose down
 ```
 OR
 ```sh
-docker compose down
+docker-compose down
 ```
 
 The service uses `restart: unless-stopped`, so it starts again automatically after reboot.
