@@ -106,15 +106,27 @@ Build and start:
 ```sh
 docker compose up -d --build
 ```
+OR
+```sh
+docker-compose up -d --build
+```
 
 Watch logs:
 
 ```sh
 docker compose logs -f oled-status
 ```
+OR
+```sh
+docker-compose logs -f oled-status
+```
 
 Stop:
 
+```sh
+docker compose down
+```
+OR
 ```sh
 docker compose down
 ```
