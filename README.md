@@ -1,6 +1,6 @@
 # Raspberry Pi OLED Status
 
-Dockerized status display for a Raspberry Pi 5 NAS using a 4-pin I2C SSD1306 OLED module.
+Dockerized status display for a Raspberry Pi 5 using a 4-pin I2C SSD1306 OLED module.
 
 The app shows:
 
